@@ -13,7 +13,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         WebSocketMessageBrokerConfigurer.super.registerStompEndpoints(registry);
-        registry.addEndpoint("ws").withSockJS();
+        registry.addEndpoint("ws").setAllowedOrigins("springboot-chatapp-soham.up.railway.app").withSockJS();
 //                .setAllowedOrigins("springboot-chatapp-soham.up.railway.app")
     }
 
